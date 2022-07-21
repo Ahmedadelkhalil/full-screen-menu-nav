@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.burger {
+  width: 25px;
+  height: 30px;
+  font-size: 25px;
+  margin: 10px;
+  cursor: pointer;
+}
+nav {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: black;
+  z-index: 9999;
+  transition: all 0.7s;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transform: translateY(-150%);
+  -webkit-transform: translateY(-150%);
+  -moz-transform: translateY(-150%);
+  -ms-transform: translateY(-150%);
+  -o-transform: translateY(-150%);
+}
+nav.show {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+nav .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 25px;
+  margin: 18px;
+  cursor: pointer;
+}
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 50px;
+  position: relative;
+}
+ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #b55adfcc;
+}
+ul li:hover a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #b55adfcc;
+  transition: all 0.7s;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+}
+ul li {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-xmark {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  background-color: #b55adfcc;
+  padding: 8px;
+  border-radius: 50%;
+}
+.fa-xmark:hover {
+  background-color: red;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.fa-bars {
+  padding: 20px;
+}
+.fa-bars:hover {
+  color: #b55adfcc;
+}
